@@ -1,63 +1,102 @@
-<?php
+<?php 
 
 
-//////// task1 
+/////task 1
 
 
-// $fruits = ['Bananas','Apples','pineapples','coconuts','oranges'];
-// foreach($fruits as $fruit){
-//     echo $fruit.'<br>';
-// }
-// // array_push($fruits,'Peachs');
-// $fruits[]='Peachs';
-// // print_r($fruits);
-// array_pop($fruits);
-// print_r($fruits);
+// $cities = ['NewYork',
+// 'Tokyo',
+// 'London',
+// 'Paris',
+// 'Sydney',
+// 'Cairo',
+// 'Beijing',
+// 'Mumbai',
+// 'Rio de Janeiro',
+// 'Toronto'];
 
-
-////// task2
-
-
-// $ages = array('omar'=>25, 'sara'=>27 , 'john' => 21, 'khalid' => 19, 'maria' => 22);
-// $ages['ahmad']=  26;
-// unset($ages['sara']);
-// foreach($ages as $key => $age){
-//     echo $key.'<br>';
+// for ($i = count($cities) - 1 ; $i >= 0 ; $i--){
+//     echo $cities[$i] . '<br>';
 // }
 
+// echo array_search('Paris' , $cities);
+
+// unset($cities[array_search('Cairo', $cities)]);
+// print_r($cities)
+
+// $firstThree = array_slice($cities , 0 , 3);
+// print_r($firstThree);
 
 
-/////////task 3
+////// task 2
+
+// $products = array(
+//     "Orange" => 1.25,
+//     "Strawberry" => 3.00,
+//     "Banana" => 0.75,
+//     "Grapes" => 2.50,
+//     "Apple" => 1.50
+// );
+
+// ksort($products);
+// print_r($products);
+
+// asort($products);
+// print_r($products);
+
+// $sum = 0;
+// foreach($products as $product => $price){
+//     $sum += $price;
+// }
+// echo $sum;
+
+// arsort($products);
+// print_r(array_slice($products , 0 , 1));
 
 
 
-// $students = array(['omar', 17, '11th grade'],['ahmad', 15, '9th grade'],['khalid', 16, '10th grade']);
-// array_push($students,['tarik', 14, '8th grade']);
-// $students[3][2] = '9th grade';
-// unset($students[3]);
-// print_r($students);
+/// task 3 
 
 
-///////////task 4
+// $books = [
+//     ["title" => "The Help", "author" => "Kathryn Stockett", "year" => 2009],
+//     ["title" => "The Girl with the Dragon Tattoo", "author" => "Stieg Larsson", "year" => 2005],
+//     ["title" => "The Hunger Games", "author" => "Suzanne Collins", "year" => 2008],
+//     ["title" => "Gone Girl", "author" => "Gillian Flynn", "year" => 2012],
+//     ["title" => "The Fault in Our Stars", "author" => "John Green", "year" => 2012]
+// ];
 
-$indexed = array(6,8,4,5,2,3,7,9);
-$indexed2 = array(20,21,22,23,24,25,26,22);
+// foreach($books as $book){
+//     if($book['year'] > 2010){
+//         print_r($book);
+//     }
+// };
 
-array_push($indexed , 8);
-array_pop($indexed);
-// print_r(array_keys($indexed));
-// print_r(array_values($indexed));
-// print_r(count($indexed));
-// print_r(array_merge($indexed,$indexed2));
-// print_r(array_search("24",$indexed2));
-// sort($indexed);
-// print_r($indexed);
+// $books[] = ["title" => "Room", "author" => "Emma Donoghue", "year" => 2010];
+// print_r($books);
 
-// $arrayA = array('j'=>'t','s'=> 'a' ,'i' => 'z' , 'e' => 'o');
-// ksort($arrayA);
-// print_r($arrayA);
+// $books[2]['author'] = 'abdullah';
+// print_r($books);
 
-// asort($arrayA);
-// print_r($arrayA);
+// $titles = array();
+// foreach($books as $book){
+//     $titles[] = $book['title'];
+// };
+// asort($titles);
+// $sortedTitles = array_values($titles);
+// // print_r($sortedTitles);
+// $sortedBooks = array();
+
+// for($i = 0; $i < count($sortedTitles) ; $i++){
+//     foreach ($books as $book){
+//         if($sortedTitles[$i] == $book['title']){
+//             // print_r($book['title'].'<br>');
+//             // echo $sortedTitles[$i];
+//             $sortedBooks[] = $book;
+//         };
+//     };
+// }
+// print_r($sortedBooks);
+
 
 ?>
